@@ -19,9 +19,10 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;    /* vertical centering within the block */
-  align-items: center;        /* horizontal centering */
-  gap: 15px;                  /* spacing between title, text, link */
+  justify-content: center;    /* center everything vertically within container */
+  align-items: center;
+  height: 60%;                /* makes the block tall enough to cluster elements near center */
+  gap: 10px;                  /* spacing between title, text, link */
 }
 
 /* Title */
