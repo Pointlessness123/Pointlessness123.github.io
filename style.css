@@ -1,52 +1,56 @@
+/* --- Base setup --- */
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-body {
+/* Container for top-middle-bottom layout */
+.container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* top-middle-bottom layout */
-  align-items: center;
+  justify-content: space-between;  /* title top, middle text centered, link bottom */
+  align-items: center;             /* horizontal centering */
   height: 100vh;
-  padding: 20px 10px;
+  padding: 20px 10px;              /* breathing room on all devices */
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.5;                /* vertical spacing */
 }
 
-/* Middle wrapper fills space to center text */
+/* Middle wrapper for vertical centering of the text */
 .middle {
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* vertical centering */
+  justify-content: center;         /* vertical centering */
   align-items: center;
-  flex: 1;                  /* takes all space between title and link */
+  flex: 1;                         /* takes up space between title and link */
 }
 
 /* Title */
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem); /* responsive font size */
   font-weight: 700;
   margin: 0;
+  word-spacing: 0;       /* tighter words */
+  letter-spacing: -0.5px; /* slightly tighter letters */
 }
 
-/* Paragraph */
+/* Paragraph / middle text */
 p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 4vw, 1.2rem); /* responsive */
   margin: 0;
   max-width: 90%;
+  word-spacing: 0;
+  letter-spacing: -0.5px;
+  line-height: 1.5;
 }
 
-/* Link */
+/* Link at the bottom */
 a {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
   font-weight: 600;
   text-decoration: underline;
-}
-/* Make words closer together */
-h1, p, a {
-  word-spacing: 0;        /* default spacing between words */
-  letter-spacing: -0.5px; /* slightly tighter letters */
-  line-height: 1.5;       /* keeps lines readable */
+  word-spacing: 0;
+  letter-spacing: -0.5px;
 }
