@@ -1,14 +1,9 @@
-/* Make the whole page a flex container */
-html, body {
-  height: 100%;       /* full height */
-  margin: 0;          /* remove default spacing */
-}
-
 body {
-  display: flex;      
-  flex-direction: column; /* stack elements vertically */
-  justify-content: center; /* center vertically */
-  align-items: center;     /* center horizontally */
-  text-align: center;      /* center text inside elements */
-  font-family: sans-serif; /* optional nicer font */
+  display: flex;
+  flex-direction: column;   /* stack elements vertically */
+  justify-content: center;  /* center block vertically */
+  align-items: center;      /* center horizontally */
+  text-align: center;       /* center text inside each element */
+  height: 100vh;            /* full viewport height */
+  margin: 0;
 }
