@@ -1,9 +1,33 @@
+/* Make the whole page fill the screen */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Center all content vertically and horizontally */
 body {
   display: flex;
   flex-direction: column;   /* stack elements vertically */
-  justify-content: center;  /* center block vertically */
-  align-items: center;      /* center horizontally */
-  text-align: center;       /* center text inside each element */
-  height: 100vh;            /* full viewport height */
-  margin: 0;
+  justify-content: center;  /* vertical centering */
+  align-items: center;      /* horizontal centering */
+  text-align: center;       /* center text inside elements */
+  font-family: sans-serif;  /* optional nicer font */
+}
+
+/* Style the title */
+h1 {
+  margin-bottom: 20px;     /* space below the title */
+}
+
+/* Style the paragraph */
+p {
+  margin-bottom: 15px;     /* space below the paragraph */
+}
+
+/* Style the link */
+a {
+  margin-top: 0;           /* tweak if needed */
+  color: blue;
+  text-decoration: underline;
+  font-weight: bold;
 }
