@@ -31,3 +31,27 @@ a {
   text-decoration: underline;
   font-weight: bold;
 }
+/* --- Text styling enhancement without changing color --- */
+
+/* Titles */
+h1 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Paragraphs */
+p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 90%;  /* keeps text from stretching too wide on mobile */
+}
+
+/* Links */
+a {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
