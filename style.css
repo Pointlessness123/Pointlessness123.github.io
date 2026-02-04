@@ -44,16 +44,9 @@ a {
   font-weight: 600;
   text-decoration: underline;
 }
-/* Adjust spacing for all text elements */
+/* Make words closer together */
 h1, p, a {
-  word-spacing: 0.1em;     /* adds a tiny bit more space between words */
-  letter-spacing: 0.02em;  /* subtle spacing between letters for readability */
-  line-height: 1.6;        /* keeps text readable and spaced nicely */
-}
-
-/* Optional: make spacing slightly responsive */
-@media (max-width: 400px) {
-  h1 { letter-spacing: 0.01em; }
-  p  { letter-spacing: 0.01em; }
-  a  { letter-spacing: 0.01em; }
+  word-spacing: 0;        /* default spacing between words */
+  letter-spacing: -0.5px; /* slightly tighter letters */
+  line-height: 1.5;       /* keeps lines readable */
 }
