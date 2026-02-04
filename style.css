@@ -13,9 +13,9 @@ html, body {
   justify-content: space-between;  /* title top, middle text centered, link bottom */
   align-items: center;             /* horizontal centering */
   height: 100vh;
-  padding: 20px 10px;              /* breathing room on all devices */
+  padding: 20px 10px;
   text-align: center;
-  line-height: 1.5;                /* vertical spacing */
+  line-height: 1.3;                /* slightly tighter vertical spacing */
 }
 
 /* Middle wrapper for vertical centering of the text */
@@ -24,26 +24,26 @@ html, body {
   flex-direction: column;
   justify-content: center;         /* vertical centering */
   align-items: center;
-  flex: 1;                         /* takes up space between title and link */
+  flex: 1;                         /* fills space between top and bottom */
 }
 
 /* Title */
 h1 {
-  font-size: clamp(2rem, 5vw, 2.5rem); /* responsive font size */
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: 700;
   margin: 0;
-  word-spacing: 0;       /* tighter words */
-  letter-spacing: -0.5px; /* slightly tighter letters */
+  word-spacing: -0.05em;           /* tighter words */
+  letter-spacing: -1px;            /* tighter letters */
 }
 
 /* Paragraph / middle text */
 p {
-  font-size: clamp(1rem, 4vw, 1.2rem); /* responsive */
+  font-size: clamp(1rem, 4vw, 1.2rem);
   margin: 0;
   max-width: 90%;
-  word-spacing: 0;
+  word-spacing: -0.05em;
   letter-spacing: -0.5px;
-  line-height: 1.5;
+  line-height: 1.3;                /* slightly tighter vertical spacing */
 }
 
 /* Link at the bottom */
@@ -51,6 +51,6 @@ a {
   font-size: clamp(0.9rem, 3vw, 1.1rem);
   font-weight: 600;
   text-decoration: underline;
-  word-spacing: 0;
+  word-spacing: -0.05em;
   letter-spacing: -0.5px;
 }
