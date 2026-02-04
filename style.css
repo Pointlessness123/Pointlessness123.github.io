@@ -6,33 +6,42 @@ html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Use flexbox to position top, middle, bottom */
+/* Make the body a flex column */
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* title top, text middle, link bottom */
-  align-items: center;            /* horizontal centering */
+  justify-content: space-between;  /* title top, link bottom */
+  align-items: center;             /* horizontal centering */
+  height: 100vh;
+  padding: 20px 10px;
   text-align: center;
-  padding: 20px 10px;             /* small padding for mobile */
-  height: 100vh;                   /* full viewport height */
   line-height: 1.6;
 }
 
-/* Title at the top */
+/* Middle wrapper for exact vertical centering */
+.middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertical centering within available space */
+  align-items: center;
+  flex: 1;                  /* fills space between title and link */
+}
+
+/* Title styling */
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
 }
 
-/* Main text in the middle */
+/* Paragraph styling */
 p {
   font-size: 1.2rem;
   margin: 0;
   max-width: 90%;
 }
 
-/* Link at the bottom */
+/* Link styling */
 a {
   font-size: 1.1rem;
   font-weight: 600;
