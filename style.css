@@ -13,44 +13,51 @@ html, body {
   justify-content: space-between;  /* title top, middle text centered, link bottom */
   align-items: center;             /* horizontal centering */
   height: 100vh;
-  padding: 20px 10px;
+  padding: 2% 5%;                  /* responsive padding */
   text-align: center;
-  line-height: 1.3;                /* slightly tighter vertical spacing */
+  line-height: 1.2;                /* tighter vertical spacing */
 }
 
-/* Middle wrapper for vertical centering of the text */
+/* Middle wrapper for exact vertical centering */
 .middle {
   display: flex;
   flex-direction: column;
   justify-content: center;         /* vertical centering */
   align-items: center;
-  flex: 1;                         /* fills space between top and bottom */
+  flex: 1;                         /* fills space between title and link */
 }
 
-/* Title */
+/* Title at top */
 h1 {
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: clamp(1.8rem, 6vw, 2.5rem); /* responsive font */
   font-weight: 700;
   margin: 0;
-  word-spacing: -0.05em;           /* tighter words */
-  letter-spacing: -1px;            /* tighter letters */
+  word-spacing: -0.08em;            /* tighter words */
+  letter-spacing: -1.2px;           /* tighter letters */
 }
 
 /* Paragraph / middle text */
 p {
-  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-size: clamp(0.95rem, 4vw, 1.2rem); /* responsive font */
   margin: 0;
   max-width: 90%;
-  word-spacing: -0.05em;
-  letter-spacing: -0.5px;
-  line-height: 1.3;                /* slightly tighter vertical spacing */
+  word-spacing: -0.08em;
+  letter-spacing: -0.8px;
+  line-height: 1.2;                     /* tight vertical spacing */
 }
 
-/* Link at the bottom */
+/* Link at bottom */
 a {
   font-size: clamp(0.9rem, 3vw, 1.1rem);
   font-weight: 600;
   text-decoration: underline;
-  word-spacing: -0.05em;
-  letter-spacing: -0.5px;
+  word-spacing: -0.08em;
+  letter-spacing: -0.8px;
+}
+
+/* Optional: further tweak spacing on very small screens */
+@media (max-width: 350px) {
+  h1 { letter-spacing: -1px; word-spacing: -0.05em; }
+  p  { letter-spacing: -0.5px; word-spacing: -0.05em; }
+  a  { letter-spacing: -0.5px; word-spacing: -0.05em; }
 }
